@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+:root {
+  --background: #090807;
+  --foreground: #f3eee4;
+  --muted: #a39a8b;
+  --gold: #c9a96a;
+  --gold-bright: #ead19a;
+  --line: rgba(234, 209, 154, 0.16);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: auto; background: var(--background); }
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+::selection { background: var(--gold); color: #090807; }
+
+.font-display { font-family: Georgia, "Times New Roman", serif; }
+.gold { color: var(--gold-bright); }
+
+.noise::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 50;
+  opacity: .045;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E");
+}
+
+.glass {
+  background: rgba(16, 14, 11, .48);
+  border: 1px solid var(--line);
+  backdrop-filter: blur(18px);
+}
+
+.gold-line { background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
