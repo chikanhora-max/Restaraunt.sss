@@ -8,7 +8,11 @@ import { ExperienceLayer } from "@/components/experience-layer";
 export default function Home() {
   return (
     <main className="noise min-h-screen bg-black">
-      <BurgerIntro /><LuxuryCursor /><SiteNav /><Hero /><Food3D />
+      <BurgerIntro />
+      <LuxuryCursor />
+      <SiteNav />
+      <Hero />
+      <Food3D />
       <section className="relative overflow-hidden border-y border-white/10 bg-[#030303] px-6 py-32 md:px-12 md:py-52">
         <div className="absolute left-1/2 top-1/2 h-[42rem] w-[42rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#c9a96a]/[.035] blur-[100px]" />
         <div className="relative mx-auto grid max-w-7xl gap-16 md:grid-cols-[.7fr_1.3fr] md:items-end">
