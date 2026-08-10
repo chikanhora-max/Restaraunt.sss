@@ -1,13 +1,13 @@
 import { Food3D } from "@/components/food-3d";
 import { Hero } from "@/components/hero";
-import { Intro } from "@/components/intro";
+import { BurgerIntro } from "@/components/burger-intro";
 import { LuxuryCursor } from "@/components/luxury-cursor";
 import { SiteNav } from "@/components/site-nav";
 
 export default function Home() {
   return (
     <main className="noise min-h-screen bg-black">
-      <Intro />
+      <BurgerIntro />
       <LuxuryCursor />
       <SiteNav />
       <Hero />
